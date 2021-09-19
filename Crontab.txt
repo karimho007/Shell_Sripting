@@ -1,0 +1,20 @@
+- crontab -e : open new editor
+
+# Use the following command to run first_script.sh every minutes, every day.
+* * * * *  /home/devsky/Desktop/Shell_Sripting/first_script.sh >> /home/devsky/Desktop/Shell_Sripting/result.log
+
+# Use the following command to run a first_script.sh every 2 minutes, every day.
+*/2 * * * *  /home/devsky/Desktop/Shell_Sripting/first_script.sh >> /home/devsky/Desktop/Shell_Sripting/result.log
+
+# Use the following command to run at 10 P.M. on weekdays, send the e-mail to ganesh@abc.com:
+0 22 * * 1-5 sendmail ganesh@abc.com < ~/work/email.txt
+
+# We can add macros in the crontab file : 
+@reboot echo `hostname` was rebooted at `date` | mail -s "Reboot notification" ganesh.admin@some-corp.com
+
+# Use the following to restart my_program after each reboot
+@reboot /bin/my_program
+
+
+
+
